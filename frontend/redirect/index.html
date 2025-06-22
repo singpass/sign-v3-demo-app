@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <title>Sign V3 Demo App</title>
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h2 id="result">Getting your signing details...</h2>
+    <a href="/">Start again</a>
+    <script>
+      const request_id = new URLSearchParams(window.location.search).get(
+        "request_id",
+      );
+      fetch(`/sign-requests/${request_id}`)
+        .then((response) => {
+          if (!response.ok) {
+            document.getElementById("result").innerHTML = "Document not signed";
+            throw response;
+          }
+          return response.blob();
+        })
+        .then((blob) => {
+          document.getElementById("result").innerHTML =
+            "Document signed! Downloading...";
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = `signed_${request_id}.pdf`;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(url);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "PORT": 4000,
+  "SIGN_BASE_URL": "http://localhost:5156/sign-v3",
+  "SIGN_JWKS_URL": "http://localhost:5156/sign-v3/jwks",
+  "CLIENT_ID": "mockpass-sign-v3-client",
+  "CLIENT_PRIVATE_KEY": {
+    "kty": "EC",
+    "d": "niMDmyyWQ6BnDQRnD4Nyixy4e0XCOVml5ZdIoMGyKbs",
+    "use": "sig",
+    "crv": "P-256",
+    "kid": "xzu5LcE8CZXm9hrmDOrxo-ktNnWPylTJobsn_T57T5E",
+    "x": "UW_yTlIWPgH2sR0wVm5-vW5wPywLffOT6q2WC-U0uok",
+    "y": "b5r2O6wMepqUyxvHlKeYS05FLTdIqfFXlb2x45UFbGU",
+    "alg": "ES256"
+  }
+}

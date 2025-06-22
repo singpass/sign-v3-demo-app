@@ -1,0 +1,16 @@
+{
+  "PORT": 4000,
+  "SIGN_BASE_URL": "https://staging.sign.singpass.gov.sg/api/v3",
+  "SIGN_JWKS_URL": "https://static.staging.sign.singpass.gov.sg/.well-known/keys.json",
+  "CLIENT_ID": "dd8aOXYJtaF0sZuPP2KvgXnUPJSg3ZlS",
+  "CLIENT_PRIVATE_KEY": {
+    "kty": "EC",
+    "d": "niMDmyyWQ6BnDQRnD4Nyixy4e0XCOVml5ZdIoMGyKbs",
+    "use": "sig",
+    "crv": "P-256",
+    "kid": "xzu5LcE8CZXm9hrmDOrxo-ktNnWPylTJobsn_T57T5E",
+    "x": "UW_yTlIWPgH2sR0wVm5-vW5wPywLffOT6q2WC-U0uok",
+    "y": "b5r2O6wMepqUyxvHlKeYS05FLTdIqfFXlb2x45UFbGU",
+    "alg": "ES256"
+  }
+}
